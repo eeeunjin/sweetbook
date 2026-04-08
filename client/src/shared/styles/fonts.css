@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'NeoHyundai';
+  src: url('/fonts/NeoHyundai L.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeoHyundai';
+  src: url('/fonts/NeoHyundai R.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeoHyundai';
+  src: url('/fonts/NeoHyundai B.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeoHyundai';
+  src: url('/fonts/NeoHyundai EB.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-sans: 'NeoHyundai', 'Noto Sans KR', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 400;
+  --fw-semibold: 700;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+}

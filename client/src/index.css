@@ -1,0 +1,163 @@
+@import './shared/styles/fonts.css';
+@import './shared/styles/colors.css';
+@import './shared/styles/typography.css';
+@import './shared/styles/elevation.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'NeoHyundai', 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff5f4;
+  color: var(--color-semantic-label-normal);
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-espresso text-white px-6 py-3 rounded-lg font-medium hover:bg-espresso-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply border border-espresso text-espresso px-6 py-3 rounded-lg font-medium hover:bg-cream-dark transition-colors;
+  }
+  .input-field {
+    @apply w-full border border-cafe-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cafe-400 bg-white placeholder-cafe-300;
+    color: var(--color-semantic-label-normal);
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-cafe-100 overflow-hidden;
+    box-shadow: var(--style-semantic-shadow-normal);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out;
+  }
+  .text-h1 {
+    font-family: var(--font-sans);
+    font-size: var(--h1-size);
+    line-height: var(--h1-line);
+    letter-spacing: var(--h1-track);
+  }
+  .text-h2 {
+    font-family: var(--font-sans);
+    font-size: var(--h2-size);
+    line-height: var(--h2-line);
+    letter-spacing: var(--h2-track);
+  }
+  .text-h3 {
+    font-family: var(--font-sans);
+    font-size: var(--h3-size);
+    line-height: var(--h3-line);
+    letter-spacing: var(--h3-track);
+  }
+  .text-h4 {
+    font-family: var(--font-sans);
+    font-size: var(--h4-size);
+    line-height: var(--h4-line);
+    letter-spacing: var(--h4-track);
+  }
+  .text-h5 {
+    font-family: var(--font-sans);
+    font-size: var(--h5-size);
+    line-height: var(--h5-line);
+    letter-spacing: var(--h5-track);
+  }
+  .text-h6 {
+    font-family: var(--font-sans);
+    font-size: var(--h6-size);
+    line-height: var(--h6-line);
+    letter-spacing: var(--h6-track);
+  }
+  .text-body1 {
+    font-family: var(--font-sans);
+    font-size: var(--body1-size);
+    line-height: var(--body1-line);
+    letter-spacing: var(--body1-track);
+  }
+  .text-body2 {
+    font-family: var(--font-sans);
+    font-size: var(--body2-size);
+    line-height: var(--body2-line);
+    letter-spacing: var(--body2-track);
+  }
+  .text-body3 {
+    font-family: var(--font-sans);
+    font-size: var(--body3-size);
+    line-height: var(--body3-line);
+    letter-spacing: var(--body3-track);
+  }
+  .text-caption1 {
+    font-family: var(--font-sans);
+    font-size: var(--caption1-size);
+    line-height: var(--caption1-line);
+    letter-spacing: var(--caption1-track);
+  }
+  .text-caption2 {
+    font-family: var(--font-sans);
+    font-size: var(--caption2-size);
+    line-height: var(--caption2-line);
+    letter-spacing: var(--caption2-track);
+  }
+
+  .shadow-normal {
+    box-shadow: var(--style-semantic-shadow-normal);
+  }
+  .shadow-emphasize {
+    box-shadow: var(--style-semantic-shadow-emphasize);
+  }
+  .shadow-strong {
+    box-shadow: var(--style-semantic-shadow-strong);
+  }
+  .shadow-heavy {
+    box-shadow: var(--style-semantic-shadow-heavy);
+  }
+  .shadow-soft {
+    box-shadow: var(--style-semantic-shadow-soft);
+  }
+}
